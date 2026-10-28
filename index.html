@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cửa hàng của tôi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#top" class="logo">Cửa hàng của tôi</a>
+    <nav>
+      <a href="#products">Sản phẩm</a>
+      <a href="#news">Tin mới</a>
+      <a href="#contact">Liên hệ</a>
+      <button id="btn-cart" class="cart-btn">Giỏ hàng <span id="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <h1>Linh kiện điện tử chính hãng, giao nhanh</h1>
+    <p>Mô tả ngắn về cửa hàng của bạn: bạn bán gì, cho ai, vì sao nên mua.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn primary">Xem sản phẩm</a>
+      <a href="#news" class="btn ghost">Đọc tin mới</a>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="why-item"><h3>Hàng sẵn kho</h3><p>Đặt hôm nay, gửi trong 24 giờ.</p></div>
+    <div class="why-item"><h3>Kiểm tra trước khi gửi</h3><p>Mỗi sản phẩm đều được thử lại.</p></div>
+    <div class="why-item"><h3>Hỗ trợ qua Zalo</h3><p>Hỏi đáp kỹ thuật trực tiếp với shop.</p></div>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Sản phẩm</h2>
+    <div id="filters" class="filters"></div>
+    <div id="product-list" class="grid"></div>
+  </section>
+
+  <section id="news" class="section">
+    <h2>Tin mới</h2>
+    <div id="news-list" class="news-grid"></div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Liên hệ</h2>
+    <p>Zalo: <a id="zalo-link" href="#" target="_blank">—</a></p>
+    <p>Email: <a id="mail-link" href="#">—</a></p>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> <span id="shop-name"></span></p>
+  </footer>
+
+  <!-- Giỏ hàng dạng ngăn kéo -->
+  <aside id="cart" class="cart hidden">
+    <div class="cart-head">
+      <h2>Giỏ hàng</h2>
+      <button id="btn-close-cart" class="close">×</button>
+    </div>
+    <ul id="cart-items"></ul>
+    <p class="total">Tổng: <strong id="cart-total">0</strong> đ</p>
+    <input id="customer-name" placeholder="Họ tên" />
+    <input id="customer-phone" placeholder="Số điện thoại" />
+    <textarea id="customer-address" placeholder="Địa chỉ giao hàng"></textarea>
+    <button id="btn-checkout" class="btn primary full">Gửi đơn qua Zalo</button>
+  </aside>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+
+.topbar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center;
+          padding: 14px 24px; background: #111; color: #fff; }
+.topbar nav { display: flex; gap: 18px; align-items: center; }
+.logo { font-weight: 700; font-size: 1.1rem; }
+
+.cart-btn { background: #fff; color: #111; border: 0; padding: 6px 12px; border-radius: 999px; cursor: pointer; }
+
+.hero { padding: 80px 24px; text-align: center; background: linear-gradient(180deg, #f4f6f8, #fff); }
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 12px; }
+.hero p { color: #555; max-width: 600px; margin: 0 auto 24px; }
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.btn { display: inline-block; padding: 10px 18px; border-radius: 6px; border: 1px solid #111; cursor: pointer; font-size: 0.95rem; }
+.btn.primary { background: #111; color: #fff; }
+.btn.ghost { background: transparent; color: #111; }
+.btn.small { padding: 6px 12px; font-size: 0.85rem; }
+.btn.full { width: 100%; }
+
+.why { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+       padding: 40px 24px; max-width: 1100px; margin: 0 auto; }
+.why-item { padding: 16px; border-left: 3px solid #111; }
+.why-item h3 { margin: 0 0 6px; }
+.why-item p { margin: 0; color: #555; }
+
+.section { padding: 48px 24px; max-width: 1100px; margin: 0 auto; }
+.section h2 { margin-top: 0; }
+
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.chip { padding: 6px 14px; border: 1px solid #ccc; border-radius: 999px; background: #fff; cursor: pointer; }
+.chip.active { background: #111; color: #fff; border-color: #111; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+.card { border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.card img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #f2f2f2; }
+.card-body { padding: 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card-body h3 { margin: 0; font-size: 1rem; }
+.card-body p { margin: 0; color: #666; font-size: 0.9rem; }
+.tag { font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: .05em; }
+.card-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 8px; }
+.price { font-weight: 700; color: #d0021b; }
+.out { font-size: 0.85rem; color: #999; }
+
+.news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.news-card { border: 1px solid #eee; border-radius: 10px; padding: 16px; }
+.news-card:hover { border-color: #111; }
+.news-card small { color: #888; }
+.news-card h3 { margin: 6px 0; font-size: 1.05rem; }
+.news-card p { margin: 0; color: #666; font-size: 0.9rem; }
+
+.contact { background: #f7f7f7; border-radius: 10px; margin-bottom: 24px; }
+
+footer { text-align: center; padding: 24px; color: #777; font-size: 0.9rem; border-top: 1px solid #eee; }
+
+.cart { position: fixed; top: 0; right: 0; width: min(380px, 100%); height: 100%; background: #fff;
+        box-shadow: -4px 0 16px rgba(0,0,0,.15); padding: 20px; overflow-y: auto; z-index: 20; }
+.cart-head { display: flex; justify-content: space-between; align-items: center; }
+.cart-head h2 { margin: 0; }
+.close { background: none; border: 0; font-size: 1.6rem; cursor: pointer; }
+.cart ul { list-style: none; padding: 0; }
+.cart li { display: flex; gap: 6px; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+.cart li span:first-child { flex: 1; }
+.cart li button { padding: 2px 8px; cursor: pointer; }
+.cart input, .cart textarea { display: block; width: 100%; margin: 8px 0; padding: 8px; border: 1px solid #ccc; border-radius: 6px; font: inherit; }
+.total { font-size: 1.05rem; }
+.hidden { display: none; }
+
+@media (max-width: 600px) {
+  .topbar { flex-direction: column; gap: 10px; }
+  .hero { padding: 48px 16px; }
+}
